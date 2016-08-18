@@ -11,15 +11,15 @@ import urllib2,re,sys
 #build_opener() method from the urllib2 library
 browser=urllib2.build_opener()
 
-#desguise the browser, so that websites think it is an actual browser running on a computer
+#disguise the browser, so that websites think it is an actual browser running on a computer
 browser.addheaders=[('User-agent', 'Mozilla/5.0')]
 
 
-#number of pages you want to retrieve (remember: 10 freelancers per page)
+#number of pages you want to retrieve 
 pagesToGet=100
 pageIndex=0
 
-#create a new file, which we will use to store the links to the freelancers. The 'w' parameter signifies that the file will be used for writing.
+#create a new file, which we will use to store the links to the jobs. The 'w' parameter signifies that the file will be used for writing.
 fileWriter=open('jobPages.txt','w')
 
 #for every number in the range from 1 to pageNum+1  
