@@ -44,8 +44,8 @@ for page in range(1,pagesToGet+1):
 
     unique=set()#remember unique names	
 
-    jobLinkType1=re.findall('class="jobtitle turnstileLink" href="?\'?([^"\'>]*)',myHTML)#get all the matches
-    jobLinkType2=re.findall('rel="nofollow"\nhref="?\'?([^"\'>]*)',myHTML)#get all the matches
+    jobLinkType1=re.findall('class="jobtitle turnstileLink" href="?\'?([^"\'>]*)',myHTML)#get all the matches for those links that open in Indeed website
+    jobLinkType2=re.findall('rel="nofollow"\nhref="?\'?([^"\'>]*)',myHTML)#get all the matches for those jobs that open in an external website
     
     for jobType1 in jobLinkType1:
         unique.add(jobType1)
